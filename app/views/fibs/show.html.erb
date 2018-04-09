@@ -1,0 +1,13 @@
+<!--<p>User input: <%= @fib.input %>  Fibonacci Sequence:<%= @fib.result %></p>-->
+<h1>Result</h1>
+<%= form_for :show do |f| %>
+<p>
+	<br>
+	<%= f.label :'User Input: ' %>   
+	<%= @fib.input %><br>
+  	<%= f.label :'Fibonacci Sequence: ' %><br>
+  	<%= @fib.result %>
+	
+</p> 
+
+<% end %>

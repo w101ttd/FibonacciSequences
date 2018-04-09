@@ -1,0 +1,22 @@
+<h1>Fibonacci Sequence Generator</h1>
+<%= form_for :fib, url: fibs_path do |f| %>
+	<% if @fib.errors.any? %>
+		<% @fib.errors.full_messages.each do |msg| %>
+			<div class="alert alert-danger"><%= msg %></div>
+		<% end %>
+	<% end %>
+<p>
+	<br>
+	<%= f.label :'Please input a positive interger number: ' %>
+  	<%= f.text_field(:input, {:class => 'form-control'}) %> <br><br>
+  	<!--
+  	<%= f.label :'Fibonacci Sequence: ' %><br>
+  	<%= f.text_field(:result, {:class => 'form-control'}) %> <br><br>
+	-->
+</p> 
+
+<p>
+  <%= f.submit('Generate', {:class => 'btn btn-primary'})  %>
+</p>
+
+<% end %>
